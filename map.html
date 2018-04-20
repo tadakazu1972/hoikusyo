@@ -224,7 +224,6 @@ function clickCheckbox0(){
 				icon: image
 			};
 			markerArray[i].setOptions(opt);
-			markerArray[i].setVisible(true);
 		}
 	} else {
 	//チェックがついた
@@ -234,26 +233,20 @@ function clickCheckbox0(){
 			if (hoikusyo[i].category=="認定こども園") {
 				if (hoikusyo[i].zero=="0"){
 					image = 'icon32x32bgray.png';
-					markerArray[i].setVisible(false);
 				} else {
 					image = 'icon32x32b.png';
-					markerArray[i].setVisible(true);
 				}
 			} else if (hoikusyo[i].category=="地域型") {
 				if (hoikusyo[i].zero=="0"){
 					image = 'icon32x32cgray.png';
-					markerArray[i].setVisible(false);
 				} else {
 					image = 'icon32x32c.png';
-					markerArray[i].setVisible(true);
 				}
 			} else {
 				if (hoikusyo[i].zero=="0"){
 					image = 'icon32x32gray.png';
-					markerArray[i].setVisible(false);
 				} else {
 					image = 'icon32x32.png';
-					markerArray[i].setVisible(true);
 				}
 			}
 			opt = {
@@ -312,7 +305,6 @@ function clickCheckbox1(){
 				icon: image
 			};
 			markerArray[i].setOptions(opt);
-			markerArray[i].setVisible(true);
 	  }
 	}
 }
