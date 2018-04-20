@@ -210,7 +210,9 @@ function clickCheckbox0(){
 	//チェックをはずしたら
 	if (!document.checkbox.elements[0].checked){  //document.フォーム名.elements[].checked
 		for (var i=0; i<markerArray.length; i++){
-			markerArray[i].setVisible(false);
+			if (hoikusyo[i].zero=="0"){
+				markerArray[i].setVisible(false);
+			}
 			/*//マーカー作成　画像ファイルを読み込み
 			var image;
 			if (hoikusyo[i].category=="認定こども園") {
