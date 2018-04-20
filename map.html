@@ -89,6 +89,11 @@ google.maps.event.addDomListener(window, 'load', function(){
 	};
 	xhr.open("get", "sukusukudata.csv", true);
 	xhr.send(null);
+
+	//center_changedイベント取得　地図の中心が動いたら円を書き直す
+	google.maps.event.addListener(mapObj, 'center_changed', function(){
+		drawCircle();
+	})
 });
 
 //地図の中心から円を描く
