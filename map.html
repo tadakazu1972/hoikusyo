@@ -22,6 +22,22 @@ var posX=34.694062;
 var posY=135.502154;
 //円オブジェクト設定
 var circle;
+//マーカー保存用
+var markerArray =  new Array();
+//保育所クラス　グローバルオブジェクト化
+var hoikusyo = new Array();
+//保育所クラス　コンストラクタ　定義　csvファイルからデータを読み込んで保存しておく箱
+function Hoikusyo(_lat, _lng, _zero, _one, _two, _three, _four, _five){
+	this.lat   = _lat;
+	this.lng   = _lng;
+	this.zero  = _zero;
+	this.one   = _one;
+	this.two   = _two;
+	this.three = _three;
+	this.four  = _four;
+	this.five  = _five;
+}
+
 //マップ作成
 google.maps.event.addDomListener(window, 'load', function(){
 	//初期設定
@@ -95,8 +111,12 @@ google.maps.event.addDomListener(window, 'load', function(){
 				icon: image,
 				title: data[2]
 			});
+			//グローバル保存
+			markerArray.push(marker);
 			//csvファイル　保育所名:data[2] 住所:data[4] 電話:data[7] URL:data[8] 0歳:data[10] 1歳:data[11] 2歳:data[12] 3歳:data[13] 4歳:data[14] 5歳:data[15] 現在月:data[16] 利用可能月:data[20] カテゴリー:data[9] 指定園:data[17]
 			attachMessage(marker, data[2], data[4], data[7], data[8], data[10], data[11], data[12], data[13], data[14], data[15], data[16], data[20], data[9], data[17]);
+			//読み込んだデータをhoikusyoクラスに格納
+			hoikusyo[i] = new Hoikusyo(data[0],data[1],data[10],data[11],data[12],data[13],data[14],data[15]);
 		}
 		//console.log(csvArray);
 	};
@@ -113,7 +133,6 @@ google.maps.event.addDomListener(window, 'load', function(){
 function drawCircle(){
 	//古い円を消去　そうしないとずっと残る
   circle.setMap(null);
-
 	//地図の中心座標取得
 	var latlng = mapObj.getCenter();
 	var cOpt = {
@@ -184,6 +203,22 @@ function attachMessage(getmarker, name, add, tel, url, zero, one, two, three, fo
 		window.open(url);
 	});
 }
+
+//０歳のチェックボックスクリック
+function clickCheckbox0(){
+	//チェックをはずしたら
+	if (!this.checked){
+		for (var i=0; i<markerArray.length; i++){
+			markerArray[i].setVisible(false);
+		}
+	} else {
+	//そうでなければチェックがついた
+	  for (var i=0; i<markerArray.length; i++){
+		  markerArray[i].setVisible(true);
+	  }	
+	}
+}
+
 </script>
 </head>
 <body>
