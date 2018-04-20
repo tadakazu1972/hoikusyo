@@ -31,7 +31,7 @@ google.maps.event.addDomListener(window, 'load', function(){
 	mapObj = new google.maps.Map(map, options);
 
   //円を描く
-	drawCircle( mapObj, posY, posX );
+	drawCircle( posX, posY );
 
 	/* https対応するまで機能OFF
 	//現在位置取得を試みる
@@ -92,9 +92,9 @@ google.maps.event.addDomListener(window, 'load', function(){
 });
 
 //地図の中心から円を描く
-function drawCircle( mapObj, posY, posX ){
+function drawCircle( posX, posY ){
 	var cOpt = {
-		center: new google.maps.LatLng( parseFloat(posY), parseFloat(posX)),
+		center: new google.maps.LatLng( posX, posY ),
 		radius: 1000,
 		strokeWeight: 3,
 		strokeColor: "#00ffff",
