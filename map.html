@@ -19,6 +19,8 @@ var mapObj;
 //大阪市役所を緯度・軽度の初期値に設定
 var posX=34.694062;
 var posY=135.502154;
+//円オブジェクト設定
+var cicle;
 //マップ作成
 google.maps.event.addDomListener(window, 'load', function(){
 	//初期設定
@@ -92,6 +94,7 @@ google.maps.event.addDomListener(window, 'load', function(){
 
 	//center_changedイベント取得　地図の中心が動いたら円を書き直す
 	google.maps.event.addListener(mapObj, 'center_changed', function(){
+
 		drawCircle();
 	})
 });
