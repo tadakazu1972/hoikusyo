@@ -210,8 +210,8 @@ function clickCheckbox0(){
 	//チェックをはずしたら
 	if (!document.checkbox.elements[0].checked){  //document.フォーム名.elements[].checked
 		for (var i=0; i<markerArray.length; i++){
-			//markerArray[i].setVisible(false);
-			//マーカー作成　画像ファイルを読み込み
+			markerArray[i].setVisible(false);
+			/*//マーカー作成　画像ファイルを読み込み
 			var image;
 			if (hoikusyo[i].category=="認定こども園") {
 				if (hoikusyo[i].zero=="0"){
@@ -236,7 +236,7 @@ function clickCheckbox0(){
 				icon: image
 			};
 			markerArray[i].setOptions(opt);
-		}
+		}*/
 	} else {
 	//チェックがついた
 	  for (var i=0; i<markerArray.length; i++){
@@ -265,6 +265,7 @@ function clickCheckbox0(){
 				icon: image
 			};
 			markerArray[i].setOptions(opt);
+			markerArray[i].setVisible(true);
 	  }
 	}
 }
