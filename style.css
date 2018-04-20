@@ -41,8 +41,8 @@ body {
 .checkbox {
 	font-size:x-large;
 	position: fixed;
-	top: 20%;
-	left:10%;
+	top: 12%;
+	left:0%;
 	background: #fff;
 }
 
@@ -82,9 +82,9 @@ body {
 	}
 
 	.checkbox {
-		font-size:large;
+		font-size:x-large;
 		position: fixed;
-		top: 10%;
+		top: 12%;
 		left:0%;
 		background: #fff;
 	}
