@@ -38,6 +38,14 @@ body {
 	height:95%;
 }
 
+.checkbox {
+	font-size:x-large;
+	position: fixed;
+	top: 20%;
+	left:10%;
+	background: #fff;
+}
+
 .fixed {
 	position: fixed;
 	top:82%;
@@ -72,6 +80,15 @@ body {
 		width: 70%;
 		height: 100%;
 	}
+	
+	.checkbox {
+		font-size:x-large;
+		position: fixed;
+		top: 20%;
+		left:10%;
+		background: #fff;
+	}
+
 	.fixed {
 		position: fixed;
 		top:75%;
