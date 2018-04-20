@@ -207,18 +207,18 @@ function attachMessage(getmarker, name, add, tel, url, zero, one, two, three, fo
 //０歳のチェックボックスクリック
 function clickCheckbox0(){
 	//チェックをはずしたら
-	if (!this.checked){
+	if (!document.checkbox.elements[0].checked){  //document.フォーム名.elements[].checked
 		for (var i=0; i<markerArray.length; i++){
 			if (hoikusyo[i].zero=="0"){
 				markerArray[i].setVisible(false);
 			}
 		}
-	} else {
-	//そうでなければチェックがついた
+	} esle {
+	//チェックがついた
 	  for (var i=0; i<markerArray.length; i++){
 			if (hoikusyo[i].zero!="0"){
 				markerArray[i].setVisible(true);
-			}		  
+			}
 	  }
 	}
 }
