@@ -99,10 +99,8 @@ google.maps.event.addDomListener(window, 'load', function(){
 //地図の中心から円を描く
 function drawCircle(){
 	//古い円を消去　そうしないとずっと残る
-	if (circle){
-		circle.setMap(null);
-	}
-	
+  circle.setMap(null);
+
 	//地図の中心座標取得
 	var latlng = mapObj.getCenter();
 	var cOpt = {
