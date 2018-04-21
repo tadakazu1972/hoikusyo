@@ -323,6 +323,162 @@ function clickCheckbox(){
 	var s;
 	s = parseInt(flag[0])*100000 + parseInt(flag[1]*10000) + parseInt(flag[2]*1000) + parseInt(flag[3]*100) + parseInt(flag[4]*10) + parseInt(flag[5]);
 	alert(s);
+	switch(s){
+		case      0:
+		  break;
+		case      1:
+		  break;
+		case     10:
+		  break;
+		case     11:
+		  break;
+		case    100:
+		  break;
+		case    101:
+		  break;
+		case    110:
+		  break;
+		case    111:
+		  break;
+		case   1000:
+		  break;
+		case   1001:
+		  break;
+		case   1010:
+		  break;
+		case   1011:
+		  break;
+		case   1100:
+		  break;
+		case   1101:
+		  break;
+		case   1110:
+		  break;
+		case   1111:
+		  break;
+		case  10000:
+		  for (var i=0; i<markerArray.length; i++){
+			  //マーカー作成　画像ファイルを読み込み
+			  var image;
+			  if (hoikusyo[i].category=="認定こども園") {
+				  if (hoikusyo[i].one=="0"){ image = 'icon32x32bgray.png'; } else { image = 'icon32x32b.png'; }
+			  } else if (hoikusyo[i].category=="地域型") {
+				  if (hoikusyo[i].one=="0"){ image = 'icon32x32cgray.png'; } else { image = 'icon32x32c.png'; }
+			  } else {
+				  if (hoikusyo[i].one=="0"){ image = 'icon32x32gray.png'; } else { image = 'icon32x32.png'; }
+			  }
+			  opt = { icon: image };
+			  markerArray[i].setOptions(opt);
+		  }
+		  break;
+		case  10001:
+		  break;
+		case  10010:
+		  break;
+		case  10011:
+		  break;
+		case  10100:
+		  break;
+		case  10101:
+		  break;
+		case  10110:
+		  break;
+		case  10111:
+		  break;
+	  case  11000:
+		  break;
+		case  11001:
+		  break;
+		case  11010:
+		  break;
+		case  11011:
+		  break;
+		case  11100:
+		  break;
+		case  11101:
+		  break;
+		case  11110:
+		  break;
+		case  11111:
+		  break;
+		case 100000:
+		  for (var i=0; i<markerArray.length; i++){
+			  //マーカー作成　画像ファイルを読み込み
+			  var image;
+			  if (hoikusyo[i].category=="認定こども園") {
+				  if (hoikusyo[i].zero=="0"){ image = 'icon32x32bgray.png'; } else { image = 'icon32x32b.png'; }
+			  } else if (hoikusyo[i].category=="地域型") {
+				  if (hoikusyo[i].zero=="0"){ image = 'icon32x32cgray.png'; } else { image = 'icon32x32c.png'; }
+			  } else {
+					if (hoikusyo[i].zero=="0"){ image = 'icon32x32gray.png'; } else { image = 'icon32x32.png'; }
+			  }
+			  opt = { icon: image };
+			  markerArray[i].setOptions(opt);
+		  }
+		  break;
+		case 100001:
+		  break;
+		case 100010:
+		  break;
+		case 100011:
+		  break;
+		case 100100:
+		  break;
+		case 100101:
+		  break;
+		case 100110:
+		  break;
+		case 100111:
+		  break;
+		case 101000:
+		  break;
+		case 101001:
+		  break;
+		case 101010:
+		  break;
+		case 101011:
+		  break;
+		case 101100:
+		  break;
+		case 101101:
+		  break;
+		case 101110:
+		  break;
+		case 101111:
+		  break;
+		case 110000:
+		  break;
+		case 110001:
+		  break;
+		case 110010:
+		  break;
+		case 110011:
+		  break;
+		case 110100:
+		  break;
+		case 110101:
+		  break;
+		case 110110:
+		  break;
+		case 110111:
+		  break;
+		case 111000:
+		  break;
+		case 111001:
+		  break;
+		case 111010:
+		  break;
+		case 111011:
+		  break;
+		case 111100:
+		  break;
+		case 111101:
+		  break;
+		case 111110:
+		  break;
+		case 111111:
+		  break;
+	}
 }
 
 </script>
