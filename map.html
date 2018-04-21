@@ -33,6 +33,7 @@ function Hoikusyo(_lat, _lng, _category, _zero, _one, _two, _three, _four, _five
 	this.lat   = _lat;
 	this.lng   = _lng;
 	this.category = _category;
+	if (!_zero.test(/^[0-9０-９]+$/)){ _zero="0"; } //[スペース、-,ー]など半角数字、全角数字でない場合0に
 	this.zero  = _zero;
 	this.one   = _one;
 	this.two   = _two;
