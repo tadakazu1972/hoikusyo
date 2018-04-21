@@ -311,15 +311,18 @@ function clickCheckbox1(){
 
 function clickCheckbox(){
 	//全てのクリックボックスの状況把握
-	var flag = new Array();
-	for(var i=0;i<5;i++){
+	var flag = new Array(); //ここに６つの配列を用意し、０歳〜５歳がチェックされてたら１たてる
+	for(var i=0;i<6;i++){
 		if(document.checkbox.elements[i].checked){
 			flag[i]=1;
 		} else {
 			flag[i]=0;
 		}
 	}
-	alert(flag);
+	//フラグをまとめて整数地に変換
+	var s;
+	s = parseInt(flag[0])*100000 + parseInt(flag[1]*10000) + parseInt(flag[2]*1000) + parseInt(flag[3]*100) + parseInt(flag[4]*10) + parseInt(flag[5]);
+	alert(s);
 }
 
 </script>
