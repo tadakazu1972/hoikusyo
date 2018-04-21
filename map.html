@@ -309,6 +309,19 @@ function clickCheckbox1(){
 	}
 }
 
+function clickCheckbox(){
+	//全てのクリックボックスの状況把握
+	var flag = new Array();
+	for(var i=0;i<5;i++){
+		if(document.checkbox.elements[i].checked){
+			flag[i]=1;
+		} else {
+			flag[i]=0;
+		}
+	}
+	alert(flag);
+}
+
 </script>
 </head>
 <body>
@@ -319,7 +332,7 @@ function clickCheckbox1(){
 	  <label><input type="checkbox" id="two" onclick="clickCheckbox2()" checked="checked">２歳</label>
 	  <label><input type="checkbox" id="three" onclick="clickCheckbox3()" checked="checked">３歳</label>
 		<label><input type="checkbox" id="four" onclick="clickCheckbox4()" checked="checked">４歳</label>
-		<label><input type="checkbox" id="five" onclick="clickCheckbox5()" checked="checked">５歳</label>
+		<label><input type="checkbox" id="five" onclick="clickCheckbox()" checked="checked">５歳</label>
   </form>
 </body>
 </html>
