@@ -263,58 +263,6 @@ function clickCheckbox0(){
 	}
 }
 
-//１歳のチェックボックスクリック
-function clickCheckbox1(){
-	//チェックをはずしたら
-	if (!document.checkbox.elements[1].checked){  //document.フォーム名.elements[].checked
-		for (var i=0; i<markerArray.length; i++){
-			//markerArray[i].setVisible(false);
-			//マーカー作成　画像ファイルを読み込み
-			var image;
-			if (hoikusyo[i].category=="認定こども園") {
-					image = 'icon32x32b.png';
-			} else if (hoikusyo[i].category=="地域型") {
-					image = 'icon32x32c.png';
-			} else {
-					image = 'icon32x32.png';
-			}
-			opt = {
-				icon: image
-			};
-			markerArray[i].setOptions(opt);
-		}
-	} else {
-	//チェックがついた
-	  for (var i=0; i<markerArray.length; i++){
-			//マーカー作成　画像ファイルを読み込み
-			var image;
-			if (hoikusyo[i].category=="認定こども園") {
-				if (hoikusyo[i].one=="0"){
-					image = 'icon32x32bgray.png'
-				} else {
-					image = 'icon32x32b.png';
-				}
-			} else if (hoikusyo[i].category=="地域型") {
-				if (hoikusyo[i].one=="0"){
-					image = 'icon32x32cgray.png'
-				} else {
-					image = 'icon32x32c.png';
-				}
-			} else {
-				if (hoikusyo[i].one=="0"){
-					image = 'icon32x32gray.png'
-				} else {
-					image = 'icon32x32.png';
-				}
-			}
-			opt = {
-				icon: image
-			};
-			markerArray[i].setOptions(opt);
-	  }
-	}
-}
-
 function clickCheckbox(){
 	//全てのクリックボックスの状況把握
 	var flag = new Array(); //ここに６つの配列を用意し、０歳〜５歳がチェックされてたら１たてる
@@ -331,6 +279,17 @@ function clickCheckbox(){
 	//alert(s);
 	switch(s){
 		case      0:
+		  for (var i=0; i<markerArray.length; i++){
+			  if (hoikusyo[i].category=="認定こども園") {
+				  image = 'icon32x32b.png';
+			  } else if (hoikusyo[i].category=="地域型") {
+				  image = 'icon32x32c.png';
+			  } else {
+				  image = 'icon32x32.png';
+			  }
+			  opt = { icon: image };
+			  markerArray[i].setOptions(opt);
+		  }
 		  break;
 		case      1:
 		  break;
