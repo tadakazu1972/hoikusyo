@@ -82,6 +82,8 @@ body {
 	}
 
 	.checkbox {
+		margin-left: auto;
+		margin-right: auto;
 		padding: 8px;
 		font-size: 4.35vw;
 		position: fixed;
