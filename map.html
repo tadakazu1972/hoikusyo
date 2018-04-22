@@ -15,6 +15,8 @@
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
 <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyA5ZVvKxwqjahjdQuyKVodbU4O58Mcg0ec&region=JP&language=ja"></script>
 <script type="text/javascript">
+//スマホの時はレイアウト変更を判定するため
+var width = window.innerWidth;
 //マップオブジェクト設定
 var mapObj;
 //大阪市役所を緯度・軽度の初期値に設定
@@ -189,8 +191,14 @@ function attachMessage(getmarker, name, add, tel, url, zero, one, two, three, fo
 	} else {
 		var ninko="";
 	}
-	//infowindow生成
-	var infowin = new google.maps.InfoWindow({ content:name2+"</br>"+add+"</br>"+"電話番号："+tel+"</br>"+urlstr+"空き状況（"+month+"月1日現在/"+month2+"月からの途中利用可能数"+ninko+"）</br>"+"0歳児："+zero+"</br>1歳児："+one+"</br>2歳児："+two+"</br>3歳児："+three+"</br>4歳児："+four+"</br>5歳児："+five+"</br>"+siteistr+"</br>"});
+	//infowindow生成 スマホの時はinfowindowを小さくするため年齢表示の時に改行をしない。
+	if (width>600){
+		//デスクトップかタブレットの時
+		var infowin = new google.maps.InfoWindow({ content:name2+"</br>"+add+"</br>"+"電話番号："+tel+"</br>"+urlstr+"空き状況（"+month+"月1日現在/"+month2+"月からの途中利用可能数"+ninko+"）</br>"+"0歳児："+zero+"</br>1歳児："+one+"</br>2歳児："+two+"</br>3歳児："+three+"</br>4歳児："+four+"</br>5歳児："+five+"</br>"+siteistr+"</br>"});
+	} else {
+		//スマホの時 幅600ピクセル以下
+		var infowin = new google.maps.InfoWindow({ content:name2+"</br>"+add+"</br>"+"電話番号："+tel+"</br>"+urlstr+"空き状況（"+month+"月1日現在/"+month2+"月からの途中利用可能数"+ninko+"）</br>"+"0歳児："+zero+", 1歳児："+one+", 2歳児："+two+", 3歳児："+three+", 4歳児："+four+", 5歳児："+five+"</br>"+siteistr+"</br>"});
+	}
 	//マウスオーバー
 	google.maps.event.addListener(getmarker, 'mouseover', function() {
 		infowin.open(getmarker.getMap(), getmarker);
