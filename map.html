@@ -231,7 +231,7 @@ function clickRadius(){
 		document.radius.elements[2].checked = false;
 		//半径500mに設定
 		radius = 500;
-		cOpt = { radius: radius; }
+		var cOpt = { radius: radius; }
 		circle.setOptions(cOpt);
 	} else (document.radius.elements[1].checked){
 		//他の２つのチェックをはずす
@@ -239,7 +239,7 @@ function clickRadius(){
 		document.radius.elements[2].checked = false;
 		//半径1kmに設定
 		radius = 1000;
-		cOpt = { radius: radius; }
+		var cOpt = { radius: radius; }
 		circle.setOptions(cOpt);
 	} else {
 		document.radius.elements[0].checked = false;
@@ -247,7 +247,7 @@ function clickRadius(){
 		document.radius.elements[2].checke = true;
 		//半径2kmに設定
 		radius = 2000;
-		cOpt = {radius: radius; }
+		var cOpt = { radius: radius; }
 		circle.setOptions(cOpt);
 	}
 }
