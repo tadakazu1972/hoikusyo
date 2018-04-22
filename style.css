@@ -80,7 +80,7 @@ body {
 		width: 70%;
 		height: 100%;
 	}
-
+  /*iPhone5sで０歳〜５歳を１行におさめるには4.35vw*/
 	.checkbox {
 		padding: 8px;
 		font-size: 4.35vw;
