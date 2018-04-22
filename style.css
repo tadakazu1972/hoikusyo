@@ -82,11 +82,11 @@ body {
 	}
 
 	.checkbox {
-		font-size: 10px;
+		font-size: 8pt;
 		position: fixed;
 		top: 12%;
 		left:0%;
-		background: #fff;
+		background: #009999;
 	}
 
 	.fixed {
