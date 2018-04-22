@@ -224,32 +224,34 @@ function attachMessage(getmarker, name, add, tel, url, zero, one, two, three, fo
 	});
 }
 
-function clickRadius(){
-  if (document.radius.elements[0].checked){
-		//他の２つのチェックをはずす
-		document.radius.elements[1].checked = false;
-		document.radius.elements[2].checked = false;
-		//半径500mに設定
-		radius = 500;
-		var cOpt = { radius: radius };
-		circle.setOptions(cOpt);
-	} else if (document.radius.elements[1].checked){
-		//他の２つのチェックをはずす
-		document.radius.elements[0].checked = false;
-		document.radius.elements[2].checked = false;
-		//半径1kmに設定
-		radius = 1000;
-		var cOpt = { radius: radius };
-		circle.setOptions(cOpt);
-	} else {
-		document.radius.elements[0].checked = false;
-		document.radius.elements[1].checked = false;
-		document.radius.elements[2].checke = true;
-		//半径2kmに設定
-		radius = 2000;
-		var cOpt = { radius: radius };
-		circle.setOptions(cOpt);
-	}
+function clickRadius0(){
+  document.radius.elements[0].checked = true;
+	document.radius.elements[1].checked = false;
+	document.radius.elements[2].checked = false;
+	//半径500mに設定
+	radius = 500;
+	var cOpt = { radius: radius };
+	circle.setOptions(cOpt);
+}
+
+function clickRadius1(){
+	document.radius.elements[0].checked = false;
+	document.radius.elements[1].checked = true;
+	document.radius.elements[2].checked = false;
+	//半径1kmに設定
+	radius = 1000;
+	var cOpt = { radius: radius };
+	circle.setOptions(cOpt);
+}
+
+function clickRadius2(){
+	document.radius.elements[0].checked = false;
+	document.radius.elements[1].checked = false;
+	document.radius.elements[2].checked = true;
+	//半径2kmに設定
+	radius = 2000;
+	var cOpt = { radius: radius };
+	circle.setOptions(cOpt);
 }
 
 function clickCheckbox(){
@@ -645,9 +647,9 @@ function clickCheckbox(){
 <body>
 	<div id="map_canvas" style="width:100%; height:100%"></div>
 	<form name="radius" class="radius">
-		<label><input type="checkbox" onclick="clickRadius()">500m</label>
-		<label><input type="checkbox" onclick="clickRadius()" checked="checked">１km</label>
-		<label><input type="checkbox" onclick="clickRadius()">２km</label>
+		<label><input type="checkbox" onclick="clickRadius0()">500m</label>
+		<label><input type="checkbox" onclick="clickRadius1()" checked="checked">１km</label>
+		<label><input type="checkbox" onclick="clickRadius2()">２km</label>
 	</form>
 	<form name="checkbox" class="checkbox">
 	  <label><input type="checkbox" id="zero"  onclick="clickCheckbox()">０歳</label>
