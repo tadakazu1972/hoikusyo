@@ -42,7 +42,7 @@ body {
 	font-size: 3.75vw;
 	position: fixed;
 	top: 12%;
-	left:0%;
+	left: 10px;
 	background: #fff;
 }
 
@@ -86,7 +86,7 @@ body {
 		font-size: 4.75vw;
 		position: fixed;
 		top: 12%;
-		left: 8px;
+		left: 10px;
 		background: #fff;
 	}
 
