@@ -197,7 +197,7 @@ function attachMessage(getmarker, name, add, tel, url, zero, one, two, three, fo
 		var infowin = new google.maps.InfoWindow({ content:name2+"</br>"+add+"</br>"+"電話番号："+tel+"</br>"+urlstr+"空き状況（"+month+"月1日現在/"+month2+"月からの途中利用可能数"+ninko+"）</br>"+"0歳児："+zero+"</br>1歳児："+one+"</br>2歳児："+two+"</br>3歳児："+three+"</br>4歳児："+four+"</br>5歳児："+five+"</br>"+siteistr+"</br>"});
 	} else {
 		//スマホの時 幅600ピクセル以下
-		var infowin = new google.maps.InfoWindow({ content:name2+"</br>"+add+"</br>"+"電話番号："+tel+"</br>"+urlstr+"空き状況（"+month+"月1日現在/"+month2+"月からの途中利用可能数"+ninko+"）</br>"+"0歳児："+zero+", 1歳児："+one+", 2歳児："+two+", 3歳児："+three+", 4歳児："+four+", 5歳児："+five+"</br>"+siteistr+"</br>"});
+		var infowin = new google.maps.InfoWindow({ content:name2+"</br>"+add+"</br>"+"電話番号："+tel+"</br>"+urlstr+"空き状況（"+month+"月1日現在/"+month2+"月からの途中利用可能数"+ninko+"）</br>"+"0歳児："+zero+"| 1歳児："+one+"| 2歳児："+two+"| 3歳児："+three+"| 4歳児："+four+"| 5歳児："+five+"|</br>"+siteistr+"</br>"});
 	}
 	//マウスオーバー
 	google.maps.event.addListener(getmarker, 'mouseover', function() {
