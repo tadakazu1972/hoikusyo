@@ -440,7 +440,7 @@ function clickCheckbox(){
 			  if (hoikusyo[i].category=="認定こども園") {
 				  if (hoikusyo[i].one=="0" || hoikusyo[i].five=="0"){ image = 'icon32x32bgray.png'; } else { image = 'icon32x32b.png'; }
 			  } else if (hoikusyo[i].category=="地域型") {
-				  if (hoikusyo[i].one=="0" || hoikusyo[i].five==""){ image = 'icon32x32cgray.png'; } else { image = 'icon32x32c.png'; } //地域型５歳はnullの場合があるため
+				  image = 'icon32x32cgray.png'; //地域型３歳以上は存在しないため必ず灰色にする
 			  } else {
 				  if (hoikusyo[i].one=="0" || hoikusyo[i].five=="0"){ image = 'icon32x32gray.png'; } else { image = 'icon32x32.png'; }
 			  }
@@ -453,7 +453,7 @@ function clickCheckbox(){
 			  if (hoikusyo[i].category=="認定こども園") {
 				  if (hoikusyo[i].one=="0" || hoikusyo[i].four=="0"){ image = 'icon32x32bgray.png'; } else { image = 'icon32x32b.png'; }
 			  } else if (hoikusyo[i].category=="地域型") {
-				  if (hoikusyo[i].one=="0" || hoikusyo[i].four==""){ image = 'icon32x32cgray.png'; } else { image = 'icon32x32c.png'; } //地域型４歳はnullの場合があるため
+				  image = 'icon32x32cgray.png'; //地域型３歳以上は存在しないため必ず灰色にする
 			  } else {
 				  if (hoikusyo[i].one=="0" || hoikusyo[i].four=="0"){ image = 'icon32x32gray.png'; } else { image = 'icon32x32.png'; }
 			  }
@@ -468,7 +468,7 @@ function clickCheckbox(){
 			  if (hoikusyo[i].category=="認定こども園") {
 				  if (hoikusyo[i].one=="0" || hoikusyo[i].three=="0"){ image = 'icon32x32bgray.png'; } else { image = 'icon32x32b.png'; }
 			  } else if (hoikusyo[i].category=="地域型") {
-				  if (hoikusyo[i].one=="0" || hoikusyo[i].three==""){ image = 'icon32x32cgray.png'; } else { image = 'icon32x32c.png'; } //地域型３歳はnullの場合があるため
+				  image = 'icon32x32cgray.png'; //地域型３歳以上は存在しないため必ず灰色にする
 			  } else {
 				  if (hoikusyo[i].one=="0" || hoikusyo[i].three=="0"){ image = 'icon32x32gray.png'; } else { image = 'icon32x32.png'; }
 			  }
@@ -527,7 +527,7 @@ function clickCheckbox(){
 			  if (hoikusyo[i].category=="認定こども園") {
 				  if (hoikusyo[i].zero=="0" || hoikusyo[i].five=="0"){ image = 'icon32x32bgray.png'; } else { image = 'icon32x32b.png'; }
 			  } else if (hoikusyo[i].category=="地域型") {
-				  if (hoikusyo[i].zero=="0" || hoikusyo[i].five==""){ image = 'icon32x32cgray.png'; } else { image = 'icon32x32c.png'; } //地域型５歳はnullの場合があるため
+				  image = 'icon32x32cgray.png'; //地域型３歳以上は存在しないため必ず灰色にする
 			  } else {
 				  if (hoikusyo[i].zero=="0" || hoikusyo[i].five=="0"){ image = 'icon32x32gray.png'; } else { image = 'icon32x32.png'; }
 			  }
@@ -540,8 +540,8 @@ function clickCheckbox(){
 			  if (hoikusyo[i].category=="認定こども園") {
 				  if (hoikusyo[i].zero=="0" || hoikusyo[i].four=="0"){ image = 'icon32x32bgray.png'; } else { image = 'icon32x32b.png'; }
 			  } else if (hoikusyo[i].category=="地域型") {
-				  if (hoikusyo[i].zero=="0" || hoikusyo[i].four==""){ image = 'icon32x32cgray.png'; } else { image = 'icon32x32c.png'; } //地域型４歳はnullの場合があるため
-			  } else {
+				  image = 'icon32x32cgray.png'; //地域型３歳以上は存在しないため必ず灰色にする
+				} else {
 				  if (hoikusyo[i].zero=="0" || hoikusyo[i].four=="0"){ image = 'icon32x32gray.png'; } else { image = 'icon32x32.png'; }
 			  }
 			  opt = { icon: image };
@@ -555,7 +555,7 @@ function clickCheckbox(){
 			  if (hoikusyo[i].category=="認定こども園") {
 				  if (hoikusyo[i].zero=="0" || hoikusyo[i].three=="0"){ image = 'icon32x32bgray.png'; } else { image = 'icon32x32b.png'; }
 			  } else if (hoikusyo[i].category=="地域型") {
-				  if (hoikusyo[i].zero=="0" || hoikusyo[i].three==""){ image = 'icon32x32cgray.png'; } else { image = 'icon32x32c.png'; } //地域型３歳はnullの場合があるため
+					image = 'icon32x32cgray.png'; //地域型３歳以上は存在しないため必ず灰色にする
 			  } else {
 				  if (hoikusyo[i].zero=="0" || hoikusyo[i].three=="0"){ image = 'icon32x32gray.png'; } else { image = 'icon32x32.png'; }
 			  }
@@ -610,6 +610,17 @@ function clickCheckbox(){
 		  }
 		  break;
 		case 110001:
+		  for (var i=0; i<markerArray.length; i++){
+			  if (hoikusyo[i].category=="認定こども園") {
+				  if (hoikusyo[i].zero=="0" || hoikusyo[i].one=="0"|| hoikusyo[i].five=="0"){ image = 'icon32x32bgray.png'; } else { image = 'icon32x32b.png'; }
+			  } else if (hoikusyo[i].category=="地域型") {
+				  image = 'icon32x32cgray.png'; //地域型３歳以上は存在しないため必ず灰色にする
+			  } else {
+				  if (hoikusyo[i].zero=="0" || hoikusyo[i].one=="0"|| hoikusyo[i].five=="0"){ image = 'icon32x32gray.png'; } else { image = 'icon32x32.png'; }
+			  }
+			  opt = { icon: image };
+			  markerArray[i].setOptions(opt);
+		  }
 		  break;
 		case 110010:
 		  break;
