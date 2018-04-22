@@ -82,12 +82,11 @@ body {
 	}
 
 	.checkbox {
-		margin-left: auto;
-		margin-right: auto;
 		padding: 8px;
 		font-size: 4.75vw;
 		position: fixed;
 		top: 12%;
+		left: 8px;
 		background: #fff;
 	}
 
